@@ -1,0 +1,60 @@
+.panel {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.section { padding: 12px 14px; }
+.sectionTitle {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.divider { height: 1px; background: var(--border); flex-shrink: 0; }
+.empty { color: var(--muted); font-size: 12px; font-family: var(--mono); }
+.label { font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+.colorRow { display: flex; align-items: center; gap: 8px; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.annMeta { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+.annId { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.tag { font-family: var(--mono); font-size: 9px; padding: 2px 6px; border-radius: 3px; }
+.metaRow { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 6px; }
+.actions { display: flex; gap: 6px; margin-top: 10px; }
+.addedNote { font-size: 11px; color: var(--muted); margin-top: 8px; line-height: 1.4; font-style: italic; }
+
+.annList { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; }
+.annItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.1s;
+  font-size: 12px;
+}
+.annItem:hover { background: var(--surface2); }
+.annItemActive { background: rgba(79,142,247,0.12) !important; }
+.annItemName { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.annDeleteBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--danger, #ef4444);
+  font-size: 11px;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 0.1s, background 0.1s;
+}
+.annDeleteBtn:hover { opacity: 1; background: rgba(239,68,68,0.15); }
+.annItem:hover .annDeleteBtn { display: block; }

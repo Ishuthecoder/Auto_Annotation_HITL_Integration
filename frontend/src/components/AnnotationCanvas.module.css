@@ -1,0 +1,32 @@
+.container {
+  flex: 1;
+  overflow: auto;
+  background: #0b0d10;
+  position: relative;
+  min-height: 0;
+}
+.container canvas { display: block; }
+.empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.drawHint {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.75);
+  border: 1px solid var(--warn);
+  color: var(--warn);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+.ready { color: var(--accent2); }

@@ -1,0 +1,50 @@
+.sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.header {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title  { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: 2px; }
+.count  { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+.list   { flex: 1; overflow-y: auto; }
+.empty  { padding: 20px 16px; color: var(--muted); font-size: 12px; }
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.1s;
+}
+.item:hover { background: var(--surface2); }
+.active { background: rgba(79,142,247,0.08) !important; border-left: 2px solid var(--accent); }
+.done   { opacity: 0.6; }
+
+.itemLeft   { flex: 1; overflow: hidden; }
+.batchName  { display: block; font-size: 13px; font-weight: 500; }
+.batchSub   { display: block; font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+.badge {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+.badgeActive  { background: var(--accent);  color: #fff; }
+.badgeDone    { background: rgba(0,229,160,0.15); color: var(--accent2); }
+.badgePending { background: rgba(100,116,139,0.15); color: var(--muted); }
